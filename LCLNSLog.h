@@ -53,7 +53,7 @@
 
 // Definition of _lcl_logger.
 #define _lcl_logger(log_component, log_level, log_format, ...) {               \
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];                \
+    NSAutoreleasePool *_lcl_logger_pool = [[NSAutoreleasePool alloc] init];    \
     NSLog(@"%s %s:%@:%d:%s " log_format,                                       \
           _lcl_level_header_1[log_level],                                      \
           _lcl_component_header[log_component],                                \
@@ -61,6 +61,6 @@
           __LINE__,                                                            \
           __PRETTY_FUNCTION__,                                                 \
           ## __VA_ARGS__);                                                     \
-    [pool release];                                                            \
+    [_lcl_logger_pool release];                                                \
 }
 
