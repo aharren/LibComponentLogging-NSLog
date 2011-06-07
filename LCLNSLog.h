@@ -32,7 +32,7 @@
 //
 // The logger uses the following format
 //
-//   <NSLog Prefix> <Level> <Component>:<File>:<Line> <Message>
+//   <NSLog Prefix> <Level> <Component>:<File>:<Line>:<Function> <Message>
 //
 // where <NSLog Prefix> is
 //
@@ -40,9 +40,9 @@
 //
 // Examples:
 //
-//   2009-02-01 12:38:32.796 Example[4964:10b] D F1:main.m:28 F1(10)
-//   2009-02-01 12:38:32.798 Example[4964:10b] D F1:main.m:32 F2(20)
-//   2009-02-01 12:38:32.799 Example[4964:10b] D F1:main.m:36 F3(30)
+//   2009-02-01 12:38:32.796 Example[4964:10b] D c1:main.m:28:-[Class method] M1
+//   2009-02-01 12:38:32.798 Example[4964:10b] D c2:main.m:32:-[Class method] M2
+//   2009-02-01 12:38:32.799 Example[4964:10b] D c3:main.m:36:-[Class method] M3
 //
 
 
