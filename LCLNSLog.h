@@ -65,12 +65,12 @@
 #endif
 
 
-// Definition of _lcl_logger.
-#define _lcl_logger(log_component, log_level, log_format, ...) {               \
+// A very simple logger, which redirects to NSLog().
+#define _lcl_logger(_component, _level, _format, ...) {                        \
     _lcl_logger_autoreleasepool_begin                                          \
-    NSLog(@"%s %s:%@:%d:%s " log_format,                                       \
-          _lcl_level_header_1[log_level],                                      \
-          _lcl_component_header[log_component],                                \
+    NSLog(@"%s %s:%@:%d:%s " _format,                                          \
+          _lcl_level_header_1[_level],                                         \
+          _lcl_component_header[_component],                                   \
           [@__FILE__ lastPathComponent],                                       \
           __LINE__,                                                            \
           __PRETTY_FUNCTION__,                                                 \
